@@ -48,4 +48,10 @@
 /*! @abstract Addtional arguments supplied with the App Link data. */
 @property (readonly) NSDictionary *arguments;
 
+- (id)          initWithURL:(NSURL *)url
+                  targetURL:(NSURL *)targetURL
+                        ref:(NSString *)ref
+    originalQueryParameters:(NSDictionary *)originalQueryParameters
+                  arguments:(NSDictionary *) arguments;
+
 @end

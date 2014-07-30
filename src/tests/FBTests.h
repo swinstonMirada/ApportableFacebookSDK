@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "FBTestSession.h"
 #import "FBRequestConnection.h"
 
@@ -24,7 +24,7 @@ extern NSString *kTestAppId;
 @class FBTestBlocker;
 @protocol FBGraphObject;
 
-@interface FBTests : SenTestCase
+@interface FBTests : XCTestCase
 
 - (FBRequestHandler)handlerExpectingSuccessSignaling:(FBTestBlocker *)blocker;
 - (FBRequestHandler)handlerExpectingFailureSignaling:(FBTestBlocker *)blocker;

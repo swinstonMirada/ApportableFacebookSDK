@@ -41,13 +41,12 @@ static NSString *loggedEvent = nil;
     [super setUp];
     // Before every test, mock the FBUtility class to return a nil
     // advertiserID because the `[[ advertisingIdentifier] UUIDString]` call likes to hang.
-    _mockFBUtility = [[OCMockObject mockForClass:[FBUtility class]] retain];
+    _mockFBUtility = [OCMockObject mockForClass:[FBUtility class]];
     [[[_mockFBUtility stub] andReturn:nil] advertiserID];
 }
 
 - (void)tearDown {
     [super tearDown];
-    [_mockFBUtility release];
     _mockFBUtility = nil;
 }
 
@@ -56,8 +55,7 @@ static NSString *loggedEvent = nil;
 }
 
 + (void)logEvent:(NSString *)eventName {
-  [loggedEvent release];
-  loggedEvent = [eventName retain];
+  loggedEvent = eventName;
 }
 
 // Ensure session is not closed by a bogus app event log.
@@ -84,20 +82,20 @@ static NSString *loggedEvent = nil;
                                                                expirationDate:nil
                                                                     loginType:FBSessionLoginTypeFacebookApplication
                                                                   refreshDate:nil];
-    FBSession *session = [[[FBSession alloc] initWithAppID:@"appid"
+    FBSession *session = [[FBSession alloc] initWithAppID:@"appid"
                                               permissions:nil
                                           urlSchemeSuffix:nil
-                                       tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance]] autorelease];
+                                       tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance]];
     [session openFromAccessTokenData:accessToken completionHandler:nil];
     
-    STAssertTrue(session.isOpen, @"Unable to verify test, session should be open");
+    XCTAssertTrue(session.isOpen, @"Unable to verify test, session should be open");
     
     [FBAppEvents logEvent:@"some_event" valueToSum:nil parameters:nil session:session];
     [FBAppEvents flush];
     
     [FBTestBlocker waitForVerifiedMock:appEventsSingletonMock delay:5.0];
   
-    [appEventsSingletonMock stopMocking];
+//    [appEventsSingletonMock stopMocking];
 }
 
 - (void)testUpdateParametersWithEventUsageLimitsAndBundleInfo {
@@ -107,19 +105,19 @@ static NSString *loggedEvent = nil;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"com.facebook.sdk:FBAppEventsLimitEventUsage"];
     [FBUtility updateParametersWithEventUsageLimitsAndBundleInfo:parameters];
-    STAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"1"], @"app tracking should default to 1");
+    XCTAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"1"], @"app tracking should default to 1");
   
     // when limited, app tracking is 0.
     [parameters removeAllObjects];
     FBSettings.limitEventAndDataUsage = YES;
     [FBUtility updateParametersWithEventUsageLimitsAndBundleInfo:parameters];
-    STAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"0"], @"app tracking should be 0 when event usage is limited");
+    XCTAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"0"], @"app tracking should be 0 when event usage is limited");
   
     // when explicitly unlimited, app tracking is 1.
     [parameters removeAllObjects];
     FBSettings.limitEventAndDataUsage = NO;
     [FBUtility updateParametersWithEventUsageLimitsAndBundleInfo:parameters];
-    STAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"1"], @"app tracking should be 1 when event usage is explicitly unlimited");
+    XCTAssertTrue([parameters[@"application_tracking_enabled"] isEqualToString:@"1"], @"app tracking should be 1 when event usage is explicitly unlimited");
 }
 
 - (void)testActivateApp {
@@ -137,10 +135,9 @@ static NSString *loggedEvent = nil;
   
     [FBSettings setDefaultAppID:@"appid"];
     [FBAppEvents activateApp];
-    STAssertTrue(publishInstallCount == 1, @"publishInstall was not triggered by activateApp");
-    STAssertTrue([@"fb_mobile_activate_app" isEqualToString:loggedEvent], @"activate app event not logged by activateApp call!");
+    XCTAssertTrue(publishInstallCount == 1, @"publishInstall was not triggered by activateApp");
+    XCTAssertTrue([@"fb_mobile_activate_app" isEqualToString:loggedEvent], @"activate app event not logged by activateApp call!");
   
-    [loggedEvent release];
     loggedEvent = nil;
   
     method_exchangeImplementations(_swizzledPublishInstall, _originalPublishInstall);

@@ -47,12 +47,6 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 #pragma mark Instance-level lifecycle
 
-- (void)dealloc
-{
-    [_defaultTestSession release];
-    [super dealloc];
-}
-
 - (void)setUp
 {
     [super setUp];
@@ -67,7 +61,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
     pthread_mutex_unlock(&mutex);
 
-    _mockFBUtility = [[OCMockObject mockForClass:[FBUtility class]] retain];
+    _mockFBUtility = [OCMockObject mockForClass:[FBUtility class]];
     [[[_mockFBUtility stub] andReturn:nil] advertiserID]; //stub advertiserID since that often hangs.
 }
 
@@ -83,9 +77,9 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     for (FBSession *session in sessions) {
         [session close];
     }
-    [sessions release];
+    sessions = nil;
 
-    [_mockFBUtility release];
+
     _mockFBUtility = nil;
 
     [super tearDown];
@@ -138,7 +132,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     FBSessionStateHandler handler = ^(FBSession *session,
                                       FBSessionState status,
                                       NSError *error) {
-        STAssertTrue(!error, @"!error");
+        XCTAssertTrue(!error, @"!error");
 
         [blocker signal];
     };
@@ -146,23 +140,22 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     [session openWithCompletionHandler:handler];
 
     BOOL success = [blocker waitWithTimeout:60];
-    STAssertTrue(success, @"blocker timed out");
-    STAssertTrue(session.isOpen, @"session.isOpen");
+    XCTAssertTrue(success, @"blocker timed out");
+    XCTAssertTrue(session.isOpen, @"session.isOpen");
 
     return session;
 }
 
 - (void)issueFriendRequestInSession:(FBTestSession *)session toFriend:(NSString *)userID
 {
-    STAssertNotNil(userID, @"missing userID");
+    XCTAssertNotNil(userID, @"missing userID");
     NSString *graphPath = [NSString stringWithFormat:@"me/friends/%@", userID];
 
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
 
-    FBRequest *request = [[[FBRequest alloc] initForPostWithSession:session
+    FBRequest *request = [[FBRequest alloc] initForPostWithSession:session
                                                           graphPath:graphPath
-                                                        graphObject:nil]
-                          autorelease];
+                                                        graphObject:nil];
 
     [request startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
@@ -172,7 +165,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
              // If test users are already friends, we will get a 400.
              expected = [code integerValue] == 400;
          }
-         STAssertTrue(expected, @"unexpected result");
+         XCTAssertTrue(expected, @"unexpected result");
          [blocker signal];
      }];
 
@@ -188,8 +181,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 - (void)validateGraphObject:(id<FBGraphObject>)graphObject hasProperties:(NSArray *)propertyNames
 {
     for (NSString *propertyName in propertyNames) {
-        STAssertNotNil([graphObject objectForKey:propertyName],
-                       [NSString stringWithFormat:@"missing property '%@'", propertyName]);
+        XCTAssertNotNil([graphObject objectForKey:propertyName], @"missing property '%@'", propertyName);
     }
 }
 
@@ -197,14 +189,13 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
                     hasProperties:(NSArray *)propertyNames
                       withSession:(FBSession *)session
                           blocker:(FBTestBlocker *)blocker {
-    FBRequest *request = [[[FBRequest alloc] initWithSession:session
-                                                   graphPath:idString]
-                          autorelease];
+    FBRequest *request = [[FBRequest alloc] initWithSession:session
+                                                   graphPath:idString];
 
     [request startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-         STAssertTrue(!error, @"!error");
-         STAssertTrue([idString isEqualToString:[result objectForKey:@"id"]], @"wrong id");
+         XCTAssertTrue(!error, @"!error");
+         XCTAssertTrue([idString isEqualToString:[result objectForKey:@"id"]], @"wrong id");
 
          [self validateGraphObject:result hasProperties:propertyNames];
 
@@ -218,14 +209,13 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
                      hasProperties:(NSArray *)propertyNames {
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] initWithExpectedSignalCount:2];
 
-    FBRequest *request = [[[FBRequest alloc] initForPostWithSession:session
+    FBRequest *request = [[FBRequest alloc] initForPostWithSession:session
                                                           graphPath:graphPath
-                                                        graphObject:graphObject]
-                          autorelease];
+                                                        graphObject:graphObject];
 
     [request startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-         STAssertTrue(!error, @"!error");
+         XCTAssertTrue(!error, @"!error");
          if (!error) {
              NSString *newObjectId = [result objectForKey:@"id"];
              [self validateGraphObjectWithId:newObjectId
@@ -236,7 +226,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
          [blocker signal];
      }];
 
-    STAssertTrue([blocker waitWithTimeout:15], @"blocker timed out");
+    XCTAssertTrue([blocker waitWithTimeout:15], @"blocker timed out");
 }
 
 // Unit tests failing? Turn on some logging with this helper.
@@ -261,7 +251,7 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     [connection addRequest:postRequest
          completionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-         STAssertTrue(!error, @"got unexpected error");
+         XCTAssertTrue(!error, @"got unexpected error");
      }
             batchEntryName:@"postRequest"];
 
@@ -274,20 +264,20 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     [connection addRequest:getRequest
          completionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-         STAssertTrue(!error, @"got unexpected error");
-         STAssertNotNil(result, @"didn't get expected result");
-         createdObject = [result retain];
+         XCTAssertTrue(!error, @"got unexpected error");
+         XCTAssertNotNil(result, @"didn't get expected result");
+         createdObject = result;
          [blocker signal];
      }];
 
     [connection start];
     [blocker wait];
 
-    [postRequest release];
-    [connection release];
-    [blocker release];
+    postRequest = nil;
+    connection = nil;
+    blocker = nil;
 
-    return [createdObject autorelease];
+    return createdObject;
 }
 
 size_t getPixels(void *info, void *buffer, size_t count) {
@@ -340,21 +330,21 @@ size_t getPixels(void *info, void *buffer, size_t count) {
 - (FBRequestHandler)handlerExpectingSuccessSignaling:(FBTestBlocker *)blocker {
     FBRequestHandler handler =
     ^(FBRequestConnection *connection, id result, NSError *error) {
-        STAssertTrue(!error, @"got unexpected error");
-        STAssertNotNil(result, @"didn't get expected result");
+        XCTAssertTrue(!error, @"got unexpected error");
+        XCTAssertNotNil(result, @"didn't get expected result");
         [blocker signal];
     };
-    return [[handler copy] autorelease];
+    return [handler copy];
 }
 
 - (FBRequestHandler)handlerExpectingFailureSignaling:(FBTestBlocker *)blocker {
     FBRequestHandler handler =
     ^(FBRequestConnection *connection, id result, NSError *error) {
-        STAssertNotNil(error, @"didn't get expected error");
-        STAssertTrue(!result, @"got unexpected result");
+        XCTAssertNotNil(error, @"didn't get expected error");
+        XCTAssertTrue(!result, @"got unexpected result");
         [blocker signal];
     };
-    return [[handler copy] autorelease];
+    return [handler copy];
 }
 
 #pragma mark -

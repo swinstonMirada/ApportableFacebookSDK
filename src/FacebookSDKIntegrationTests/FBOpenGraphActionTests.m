@@ -107,7 +107,7 @@
     id<FBOGRunTestAction> action = [self createComplexOpenGraphAction:session2.testUserID];
 
     id postedAction = [self batchedPostAndGetWithSession:session1 graphPath:@"me/"UNIT_TEST_OPEN_GRAPH_NAMESPACE":run" graphObject:action];
-    STAssertNotNil(postedAction, @"nil postedAction");
+    XCTAssertNotNil(postedAction, @"nil postedAction");
 
     [self validateGraphObject:postedAction
                 hasProperties:[NSArray arrayWithObjects:
@@ -136,11 +136,11 @@
     id postedAction = [self batchedPostAndGetWithSession:self.defaultTestSession
                                                graphPath:@"me/"UNIT_TEST_OPEN_GRAPH_NAMESPACE":run"
                                              graphObject:action];
-    STAssertNotNil(postedAction, @"nil postedAction");
+    XCTAssertNotNil(postedAction, @"nil postedAction");
 
     NSArray *postedImages = [postedAction objectForKey:@"image"];
-    STAssertNotNil(postedImages, @"nil images");
-    STAssertTrue(1 == postedImages.count, @"not 1 image");
+    XCTAssertNotNil(postedImages, @"nil images");
+    XCTAssertTrue(1 == postedImages.count, @"not 1 image");
 
     id<FBGraphObject> postedImage = [postedImages objectAtIndex:0];
     [self validateGraphObject:postedImage hasProperties:[NSArray arrayWithObjects:

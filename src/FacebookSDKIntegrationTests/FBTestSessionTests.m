@@ -40,7 +40,7 @@
     // Get the number of test users. Use an FBTestSession without a user (and thus no
     // access token), so we can specify our own access token.
     FBTestSession *fqlSession = [FBTestSession sessionWithSharedUserWithPermissions:nil];
-    STAssertNil(fqlSession.accessTokenData, @"non-nil access token");
+    XCTAssertNil(fqlSession.accessTokenData, @"non-nil access token");
     
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
@@ -51,28 +51,26 @@
                                 nil];   
     
     __block int count = 0;
-    FBRequest *request = [[[FBRequest alloc] initWithSession:fqlSession
+    FBRequest *request = [[FBRequest alloc] initWithSession:fqlSession
                                                    graphPath:@"fql"
                                                   parameters:parameters
-                                                  HTTPMethod:nil]
-                          autorelease];
+                                                  HTTPMethod:nil];
     [request startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-        STAssertNotNil(result, @"nil result");
-        STAssertNil(error, @"non-nil error");
-        STAssertTrue([result isKindOfClass:[NSDictionary class]], @"not dictionary");
+        XCTAssertNotNil(result, @"nil result");
+        XCTAssertNil(error, @"non-nil error");
+        XCTAssertTrue([result isKindOfClass:[NSDictionary class]], @"not dictionary");
         
         id data = [result objectForKey:@"data"];
-        STAssertTrue([data isKindOfClass:[NSArray class]], @"not array");
+        XCTAssertTrue([data isKindOfClass:[NSArray class]], @"not array");
         
-        count = [data count];
+        count = (int)[data count];
         
         [blocker signal];
     }];
      
     [blocker wait];
-    [blocker release];
-    
+    blocker = nil;
     return count;
 }
 
@@ -91,7 +89,7 @@
     
     int endingUserCount = [self countTestUsers];
     
-    STAssertEquals(startingUserCount, endingUserCount, @"differing counts");
+    XCTAssertEqual(startingUserCount, endingUserCount, @"differing counts");
     [session close];
 }
 

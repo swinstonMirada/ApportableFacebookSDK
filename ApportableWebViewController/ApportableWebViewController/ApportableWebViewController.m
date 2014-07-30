@@ -4,11 +4,10 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "ApportableWebViewController.h"
-
 #if !defined(ANDROID)
-#warning unimplemented on non-Android platform
+//#warning unimplemented on non-Android platform
 #else
+#import "ApportableWebViewController.h"
 
 // 2014/07/11 - requires Apportable BridgeKit 2.x
 #import <BridgeKit/JavaObject.h>

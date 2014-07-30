@@ -56,8 +56,8 @@
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testDifferentAccessTokens
@@ -66,29 +66,27 @@
     FBTestSession *session2 = [self getSessionWithSharedUserWithPermissions:nil
                                                               uniqueUserTag:kSecondTestUserTag];
     
-    FBRequest *request1 = [[[FBRequest alloc] initWithSession:session1
-                                                    graphPath:@"me"]
-                           autorelease];
-    FBRequest *request2 = [[[FBRequest alloc] initWithSession:session2
-                                                    graphPath:@"me"]
-                           autorelease];
+    FBRequest *request1 = [[FBRequest alloc] initWithSession:session1
+                                                    graphPath:@"me"];
+    FBRequest *request2 = [[FBRequest alloc] initWithSession:session2
+                                                    graphPath:@"me"];
     
     FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
     [connection addRequest:request1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              id<FBGraphUser> user = result;
-             STAssertTrue([user.id isEqualToString:self.defaultTestSession.testUserID], @"wrong user");
+             XCTAssertTrue([user.id isEqualToString:self.defaultTestSession.testUserID], @"wrong user");
          }];
     [connection addRequest:request2
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              id<FBGraphUser> user = result;
-             STAssertTrue([user.id isEqualToString:session2.testUserID], @"wrong user");
+             XCTAssertTrue([user.id isEqualToString:session2.testUserID], @"wrong user");
              
              [blocker signal];
          }];
@@ -96,70 +94,66 @@
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testBatchWithValidSessionAndNoSession
 {
-    FBRequest *request1 = [[[FBRequest alloc] initWithSession:self.defaultTestSession
-                                                    graphPath:@"me"]
-                           autorelease];
-    FBRequest *request2 = [[[FBRequest alloc] initWithSession:nil
-                                                    graphPath:@"zuck"]
-                           autorelease];
+    FBRequest *request1 = [[FBRequest alloc] initWithSession:self.defaultTestSession
+                                                    graphPath:@"me"];
+    FBRequest *request2 = [[FBRequest alloc] initWithSession:nil
+                                                    graphPath:@"zuck"];
     
     FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
     [connection addRequest:request1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
          }];
     [connection addRequest:request2
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              [blocker signal];
          }];
     
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testBatchWithNoSessionAndValidSession
 {
-    FBRequest *request1 = [[[FBRequest alloc] initWithSession:nil
-                                                    graphPath:@"zuck"]
-                           autorelease];
-    FBRequest *request2 = [[[FBRequest alloc] initWithSession:self.defaultTestSession
-                                                    graphPath:@"me"]
-                           autorelease];
+    FBRequest *request1 = [[FBRequest alloc] initWithSession:nil
+                                                    graphPath:@"zuck"];
+    FBRequest *request2 = [[FBRequest alloc] initWithSession:self.defaultTestSession
+                                                    graphPath:@"me"];
     
     FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
     [connection addRequest:request1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
          }];
     [connection addRequest:request2
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              [blocker signal];
          }];
     
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testBatchWithTwoSessionlessRequestsAndDefaultAppID
@@ -168,33 +162,31 @@
     FBTestSession *session = self.defaultTestSession;
     [FBSession setDefaultAppID:session.testAppID];
     
-    FBRequest *request1 =[[[FBRequest alloc] initWithSession:nil
-                                                   graphPath:@"zuck"]
-                          autorelease];
-    FBRequest *request2 = [[[FBRequest alloc] initWithSession:nil
-                                                    graphPath:@"zuck"]
-                           autorelease];
+    FBRequest *request1 =[[FBRequest alloc] initWithSession:nil
+                                                   graphPath:@"zuck"];
+    FBRequest *request2 = [[FBRequest alloc] initWithSession:nil
+                                                    graphPath:@"zuck"];
     
     FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
     [connection addRequest:request1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
          }];
     [connection addRequest:request2
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              [blocker signal];
          }];
     
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testMixedSuccessAndFailure
@@ -206,9 +198,8 @@
 
     for (int i = 0; i < kNumRequests; ++i) {
         BOOL success = (i % 2) == 1;
-        FBRequest *request = [[[FBRequest alloc] initWithSession:self.defaultTestSession
-                                                       graphPath:success ? @"me" : @"-1"]
-                              autorelease];
+        FBRequest *request = [[FBRequest alloc] initWithSession:self.defaultTestSession
+                                                       graphPath:success ? @"me" : @"-1"];
         [connection addRequest:request 
              completionHandler:success ? 
                 [self handlerExpectingSuccessSignaling:blocker] :
@@ -218,8 +209,8 @@
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testBatchUploadPhoto
@@ -236,7 +227,7 @@
     [uploadRequest1 setSession:session];
     [connection addRequest:uploadRequest1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
+             XCTAssertTrue(!error, @"!error");
              [blocker signal];
          }
          batchEntryName:@"uploadRequest1"];
@@ -245,7 +236,7 @@
     [uploadRequest2 setSession:session];
     [connection addRequest:uploadRequest2
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
+             XCTAssertTrue(!error, @"!error");
              [blocker signal];
          }
          batchEntryName:@"uploadRequest2"];
@@ -256,12 +247,12 @@
                                                      HTTPMethod:nil];
     [connection addRequest:getRequest1 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
              
              NSDecimalNumber *width = [result objectForKey:@"width"];
-             STAssertNotNil(width, @"couldn't get width");
-             STAssertTrue(image1Size == (int)[width doubleValue], @"wrong width");
+             XCTAssertNotNil(width, @"couldn't get width");
+             XCTAssertTrue(image1Size == (int)[width doubleValue], @"wrong width");
              NSLog(@"%@", width);
 
              [blocker signal];
@@ -272,12 +263,12 @@
                                                      HTTPMethod:nil];
     [connection addRequest:getRequest2 
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertTrue(!error, @"!error");
-             STAssertNotNil(result, @"nil result");
+             XCTAssertTrue(!error, @"!error");
+             XCTAssertNotNil(result, @"nil result");
 
              NSDecimalNumber *width = [result objectForKey:@"width"];
-             STAssertNotNil(width, @"couldn't get width");
-             STAssertTrue(image2Size == (int)[width doubleValue], @"wrong width");
+             XCTAssertNotNil(width, @"couldn't get width");
+             XCTAssertTrue(image2Size == (int)[width doubleValue], @"wrong width");
              NSLog(@"%@", width);
              
              [blocker signal];
@@ -286,47 +277,47 @@
     [connection start];
     [blocker wait];
     
-    [connection release];
-    [blocker release];
+    connection = nil;
+    blocker = nil;
 }
 
 - (void)testBatchParametersOmitResponseOnSuccess {
     FBTestSession *session = [self defaultTestSession];
-    FBRequestConnection *connection = [[[FBRequestConnection alloc] init] autorelease];
+    FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     FBTestBlocker *blocker = [[FBTestBlocker alloc] initWithExpectedSignalCount:2];
     // Note these ids are significant in that they are ids of other test users. Since we use FBTestSession
     // above (which will have a platform test user access token), the ids need to be objects that are visible
     // to the platform test user (such as other test users).
-    FBRequest *parent = [[[FBRequest alloc] initWithSession:session graphPath:@"?ids=100006424828400,100006675870174"] autorelease];
+    FBRequest *parent = [[FBRequest alloc] initWithSession:session graphPath:@"?ids=100006424828400,100006675870174"];
     [connection addRequest:parent
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertNil(error, @"unexpected error in parent request :%@", error);
-             STAssertNotNil(result, @"expected parent results since we said to include response");
+             XCTAssertNil(error, @"unexpected error in parent request :%@", error);
+             XCTAssertNotNil(result, @"expected parent results since we said to include response");
              [blocker signal];
          } batchParameters:@{@"name":@"getactions", @"omit_response_on_success":@(NO)}];
     
-    FBRequest *child = [[[FBRequest alloc] initWithSession:session graphPath:@"?ids={result=getactions:$.*.id}"] autorelease];
+    FBRequest *child = [[FBRequest alloc] initWithSession:session graphPath:@"?ids={result=getactions:$.*.id}"];
     [connection addRequest:child
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertNil(error, @"unexpected error in child request :%@", error);
-             STAssertNotNil(result, @"expected results");
+             XCTAssertNil(error, @"unexpected error in child request :%@", error);
+             XCTAssertNotNil(result, @"expected results");
              [blocker signal];
          } batchEntryName:nil];
     [connection start];
     
-    STAssertTrue([blocker waitWithTimeout:60], @"blocker timed out");
+    XCTAssertTrue([blocker waitWithTimeout:60], @"blocker timed out");
 }
 
 - (void)testBatchParametersDependsOn {
     FBTestSession *session = [self defaultTestSession];
-    FBRequestConnection *connection = [[[FBRequestConnection alloc] init] autorelease];
+    FBRequestConnection *connection = [[FBRequestConnection alloc] init];
     FBTestBlocker *blocker = [[FBTestBlocker alloc] initWithExpectedSignalCount:2];
 
     // Set up a parent request to an invalid graph path that will result in an error.
-    FBRequest *parent = [[[FBRequest alloc] initWithSession:session graphPath:@"invalidpath"] autorelease];
+    FBRequest *parent = [[FBRequest alloc] initWithSession:session graphPath:@"invalidpath"];
     [connection addRequest:parent
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertNotNil(error, @"expected error in parent request but did not get one.");
+             XCTAssertNotNil(error, @"expected error in parent request but did not get one.");
              [blocker signal];
          } batchParameters:@{@"name":@"parent"}];
     
@@ -334,16 +325,16 @@
     // by adding the depends_on explicitly and verifying that the child response has no data (nor error).
     // "If the parent operation execution results in an error, then the subsequent operation is not executed"
     // (see https://developers.facebook.com/docs/reference/api/batch/)
-    FBRequest *child = [[[FBRequest alloc] initWithSession:session graphPath:@"?ids=4,6"] autorelease];
+    FBRequest *child = [[FBRequest alloc] initWithSession:session graphPath:@"?ids=4,6"];
     [connection addRequest:child
          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-             STAssertNil(error, @"unexpected error in child request :%@", error);
-             STAssertNil(result, @"unexpected results in child request %@", result);
+             XCTAssertNil(error, @"unexpected error in child request :%@", error);
+             XCTAssertNil(result, @"unexpected results in child request %@", result);
              [blocker signal];
          } batchParameters:@{@"depends_on":@"parent"}];
     [connection start];
     
-    STAssertTrue([blocker waitWithTimeout:60], @"blocker timed out");
+    XCTAssertTrue([blocker waitWithTimeout:60], @"blocker timed out");
 }
 
 @end
