@@ -118,6 +118,8 @@
  * Implementations must call dismissWithSuccess:YES at some point to hide the dialog.
  */
 - (void)dialogDidCancel:(NSURL *)url;
+    
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
