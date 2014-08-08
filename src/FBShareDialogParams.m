@@ -43,7 +43,7 @@ static NSString *const kFBShareDialogProdVersion = @"20130410";
     [_link release];
     [_name release];
     [_caption release];
-    [_description release];
+    [_description2 release];
     [_picture release];
     [_friends release];
     [_place release];
@@ -64,8 +64,8 @@ static NSString *const kFBShareDialogProdVersion = @"20130410";
     if (self.caption) {
         [args setObject:self.caption forKey:@"caption"];
     }
-    if (self.description) {
-        [args setObject:self.description forKey:@"description"];
+    if (self.description2) {
+        [args setObject:self.description2 forKey:@"description"];
     }
     if (self.picture) {
         [args setObject:[self.picture absoluteString] forKey:@"picture"];
