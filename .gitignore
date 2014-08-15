@@ -16,6 +16,8 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+*/*.approj/targets/*
+*.approj/targets/*
 
 
 *.sconsign.dblite
