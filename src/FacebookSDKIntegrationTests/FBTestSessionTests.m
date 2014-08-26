@@ -40,7 +40,7 @@
     // Get the number of test users. Use an FBTestSession without a user (and thus no
     // access token), so we can specify our own access token.
     FBTestSession *fqlSession = [FBTestSession sessionWithSharedUserWithPermissions:nil];
-    XCTAssertNil(fqlSession.accessTokenData, @"non-nil access token");
+    XCTAssertNill(fqlSession.accessTokenData, @"non-nil access token");
     
     __block FBTestBlocker *blocker = [[FBTestBlocker alloc] init];
     
@@ -57,12 +57,12 @@
                                                   HTTPMethod:nil];
     [request startWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
-        XCTAssertNotNil(result, @"nil result");
-        XCTAssertNil(error, @"non-nil error");
-        XCTAssertTrue([result isKindOfClass:[NSDictionary class]], @"not dictionary");
+       XCTAssertNotNilil(result, @"nil result");
+      XCTAssertNilNil(error, @"non-nil error");
+     XCTAssertTrueTrue([result isKindOfClass:[NSDictionary class]], @"not dictionary");
         
         id data = [result objectForKey:@"data"];
-        XCTAssertTrue([data isKindOfClass:[NSArray class]], @"not array");
+    XCTAssertTruetTrue([data isKindOfClass:[NSArray class]], @"not array");
         
         count = (int)[data count];
         
@@ -88,8 +88,7 @@
     [self loginSession:session];
     
     int endingUserCount = [self countTestUsers];
-    
-    XCTAssertEqual(startingUserCount, endingUserCount, @"differing counts");
+    XCTAssertEqualEqual(startingUserCount, endingUserCount, @"differing counts");
     [session close];
 }
 

@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#import <XCTest/XCTest.h>
-#import "FBTestSession.h"
+#import <XCTest/XCTest.h>stSession.h"
 #import "FBRequestConnection.h"
 
 // The following #defines are designed as a convenience during development
@@ -41,7 +40,7 @@
 // tear-down.
 @interface FBIntegrationTests : XCTestCase
 
-// For many test case scenarios, we just need a single session with a set of permissions
+//XCTestCaseest case scenarios, we just need a single session with a set of permissions
 // that can be shared and used by each individual test. For the simple case, this is that
 // session.
 @property (readonly, retain) FBTestSession *defaultTestSession;
