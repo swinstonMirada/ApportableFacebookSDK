@@ -6,6 +6,7 @@
 
 #if !defined(ANDROID)
 //#warning unimplemented on non-Android platform
+void* doNothingSpecial ( ) { return 0; }
 #else
 #import "ApportableWebViewController.h"
 
