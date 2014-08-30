@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "asset": "/tmp/tmpVwgwh9/TARGET_BUILD_DIR/libApportableWebViewController.a", 
+            "asset": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/TARGET_BUILD_DIR/libApportableWebViewController.a", 
             "target": "/var/jenkins/workspace/client-ios/PictoPop/normal"
         }
     ], 
@@ -80,7 +80,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/tmp/tmpVwgwh9/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -88,11 +88,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/tmp/tmpVwgwh9/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/tmp/tmpVwgwh9/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
