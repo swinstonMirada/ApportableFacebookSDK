@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "asset": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/TARGET_BUILD_DIR/libFacebookSDK.a", 
+            "asset": "/tmp/tmpVwgwh9/TARGET_BUILD_DIR/libFacebookSDK.a", 
             "target": "/var/jenkins/workspace/client-ios/PictoPop/normal"
         }
     ], 
@@ -765,7 +765,7 @@
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/tmp/tmpVwgwh9/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -949,11 +949,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/tmp/tmpVwgwh9/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR", 
+            "header_path": "/tmp/tmpVwgwh9/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
