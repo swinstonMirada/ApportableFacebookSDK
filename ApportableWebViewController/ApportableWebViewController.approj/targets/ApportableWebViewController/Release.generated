@@ -1,8 +1,8 @@
 {
     "assets": [
         {
-            "asset": "../../../../../var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp0W6_gx/TARGET_BUILD_DIR/libApportableWebViewController.a", 
-            "target": "../../../../../../../../Users/swinston/Mirada/client-ios/PictoPop/normal"
+            "asset": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/TARGET_BUILD_DIR/libApportableWebViewController.a", 
+            "target": "/var/jenkins/workspace/client-ios/PictoPop/normal"
         }
     ], 
     "config": {}, 
@@ -68,19 +68,19 @@
             "hmap": {
                 "ApportableWebViewController-Prefix.pch": {
                     "key": "ApportableWebViewController-Prefix.pch", 
-                    "prefix": "../../lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
                     "suffix": "ApportableWebViewController-Prefix.pch"
                 }, 
                 "ApportableWebViewController.h": {
                     "key": "ApportableWebViewController.h", 
-                    "prefix": "../../lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
                     "suffix": "ApportableWebViewController.h"
                 }
             }, 
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp0W6_gx/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -88,11 +88,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp0W6_gx/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp0W6_gx/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
@@ -101,7 +101,7 @@
     "libs": [], 
     "modules": [], 
     "pchs": [
-        "./ApportableWebViewController/ApportableWebViewController-Prefix.pch"
+        "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/ApportableWebViewController-Prefix.pch"
     ], 
     "sources": [
         {

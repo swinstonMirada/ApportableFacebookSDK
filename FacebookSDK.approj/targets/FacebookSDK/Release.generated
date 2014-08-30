@@ -1,8 +1,8 @@
 {
     "assets": [
         {
-            "asset": "../../../../../../var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpkTG9Uc/TARGET_BUILD_DIR/libFacebookSDK.a", 
-            "target": "../../../../../../../../Users/swinston/Mirada/lib/c/ApportableFacebookSDK/normal"
+            "asset": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/TARGET_BUILD_DIR/libFacebookSDK.a", 
+            "target": "/var/jenkins/workspace/client-ios/PictoPop/normal"
         }
     ], 
     "config": {}, 
@@ -63,709 +63,709 @@
             "hmap": {
                 "FBAccessTokenData+Internal.h": {
                     "key": "FBAccessTokenData+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAccessTokenData+Internal.h"
                 }, 
                 "FBAccessTokenData.h": {
                     "key": "FBAccessTokenData.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBAccessTokenData.h"
                 }, 
                 "FBAccessTokenDataTests.h": {
                     "key": "FBAccessTokenDataTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBAccessTokenDataTests.h"
                 }, 
                 "FBAppBridge.h": {
                     "key": "FBAppBridge.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAppBridge.h"
                 }, 
                 "FBAppBridgeTests.h": {
                     "key": "FBAppBridgeTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBAppBridgeTests.h"
                 }, 
                 "FBAppBridgeTypeToJSONConverter.h": {
                     "key": "FBAppBridgeTypeToJSONConverter.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAppBridgeTypeToJSONConverter.h"
                 }, 
                 "FBAppCall+Internal.h": {
                     "key": "FBAppCall+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAppCall+Internal.h"
                 }, 
                 "FBAppCall.h": {
                     "key": "FBAppCall.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBAppCall.h"
                 }, 
                 "FBAppCallTests.h": {
                     "key": "FBAppCallTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBAppCallTests.h"
                 }, 
                 "FBAppEvents+Internal.h": {
                     "key": "FBAppEvents+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAppEvents+Internal.h"
                 }, 
                 "FBAppEvents.h": {
                     "key": "FBAppEvents.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBAppEvents.h"
                 }, 
                 "FBAppEventsIntegrationTests.h": {
                     "key": "FBAppEventsIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBAppEventsIntegrationTests.h"
                 }, 
                 "FBAppLinkData+Internal.h": {
                     "key": "FBAppLinkData+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBAppLinkData+Internal.h"
                 }, 
                 "FBAppLinkData.h": {
                     "key": "FBAppLinkData.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBAppLinkData.h"
                 }, 
                 "FBAppLinkDataTests.h": {
                     "key": "FBAppLinkDataTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBAppLinkDataTests.h"
                 }, 
                 "FBAuthenticationTests.h": {
                     "key": "FBAuthenticationTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBAuthenticationTests.h"
                 }, 
                 "FBBase64.h": {
                     "key": "FBBase64.h", 
-                    "prefix": "src/Base64/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/Base64/", 
                     "suffix": "FBBase64.h"
                 }, 
                 "FBBatchRequestIntegrationTests.h": {
                     "key": "FBBatchRequestIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBBatchRequestIntegrationTests.h"
                 }, 
                 "FBBatchRequestTests.h": {
                     "key": "FBBatchRequestTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBBatchRequestTests.h"
                 }, 
                 "FBCacheDescriptor.h": {
                     "key": "FBCacheDescriptor.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBCacheDescriptor.h"
                 }, 
                 "FBCacheIndex.h": {
                     "key": "FBCacheIndex.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBCacheIndex.h"
                 }, 
                 "FBCacheIntegrationTests.h": {
                     "key": "FBCacheIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBCacheIntegrationTests.h"
                 }, 
                 "FBCacheTests.h": {
                     "key": "FBCacheTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBCacheTests.h"
                 }, 
                 "FBConnect.h": {
                     "key": "FBConnect.h", 
-                    "prefix": "include/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/", 
                     "suffix": "FBConnect.h"
                 }, 
                 "FBCrypto.h": {
                     "key": "FBCrypto.h", 
-                    "prefix": "src/Cryptography/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/Cryptography/", 
                     "suffix": "FBCrypto.h"
                 }, 
                 "FBDataDiskCache.h": {
                     "key": "FBDataDiskCache.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBDataDiskCache.h"
                 }, 
                 "FBDialog.h": {
                     "key": "FBDialog.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBDialog.h"
                 }, 
                 "FBDialogClosePNG.h": {
                     "key": "FBDialogClosePNG.h", 
-                    "prefix": "src/ImageResources/FBDialog/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBDialog/", 
                     "suffix": "FBDialogClosePNG.h"
                 }, 
                 "FBDialogs+Internal.h": {
                     "key": "FBDialogs+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBDialogs+Internal.h"
                 }, 
                 "FBDialogs.h": {
                     "key": "FBDialogs.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBDialogs.h"
                 }, 
                 "FBDialogsData+Internal.h": {
                     "key": "FBDialogsData+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBDialogsData+Internal.h"
                 }, 
                 "FBDialogsData.h": {
                     "key": "FBDialogsData.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBDialogsData.h"
                 }, 
                 "FBDialogsParams+Internal.h": {
                     "key": "FBDialogsParams+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBDialogsParams+Internal.h"
                 }, 
                 "FBDialogsParams.h": {
                     "key": "FBDialogsParams.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBDialogsParams.h"
                 }, 
                 "FBDynamicFrameworkLoader.h": {
                     "key": "FBDynamicFrameworkLoader.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBDynamicFrameworkLoader.h"
                 }, 
                 "FBError.h": {
                     "key": "FBError.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBError.h"
                 }, 
                 "FBErrorUtility+Internal.h": {
                     "key": "FBErrorUtility+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBErrorUtility+Internal.h"
                 }, 
                 "FBErrorUtility.h": {
                     "key": "FBErrorUtility.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBErrorUtility.h"
                 }, 
                 "FBFacebookAppAuthenticationTests.h": {
                     "key": "FBFacebookAppAuthenticationTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBFacebookAppAuthenticationTests.h"
                 }, 
                 "FBFetchedAppSettings.h": {
                     "key": "FBFetchedAppSettings.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBFetchedAppSettings.h"
                 }, 
                 "FBFrictionlessDialogSupportDelegate.h": {
                     "key": "FBFrictionlessDialogSupportDelegate.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBFrictionlessDialogSupportDelegate.h"
                 }, 
                 "FBFrictionlessRecipientCache.h": {
                     "key": "FBFrictionlessRecipientCache.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBFrictionlessRecipientCache.h"
                 }, 
                 "FBFrictionlessRequestSettings.h": {
                     "key": "FBFrictionlessRequestSettings.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBFrictionlessRequestSettings.h"
                 }, 
                 "FBFriendPickerCacheDescriptor.h": {
                     "key": "FBFriendPickerCacheDescriptor.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBFriendPickerCacheDescriptor.h"
                 }, 
                 "FBFriendPickerViewController+Internal.h": {
                     "key": "FBFriendPickerViewController+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBFriendPickerViewController+Internal.h"
                 }, 
                 "FBFriendPickerViewController.h": {
                     "key": "FBFriendPickerViewController.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBFriendPickerViewController.h"
                 }, 
                 "FBFriendPickerViewDefaultPNG.h": {
                     "key": "FBFriendPickerViewDefaultPNG.h", 
-                    "prefix": "src/ImageResources/FBFriendPickerView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBFriendPickerView/", 
                     "suffix": "FBFriendPickerViewDefaultPNG.h"
                 }, 
                 "FBGraphLocation.h": {
                     "key": "FBGraphLocation.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBGraphLocation.h"
                 }, 
                 "FBGraphObject.h": {
                     "key": "FBGraphObject.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBGraphObject.h"
                 }, 
                 "FBGraphObjectPagingLoader.h": {
                     "key": "FBGraphObjectPagingLoader.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBGraphObjectPagingLoader.h"
                 }, 
                 "FBGraphObjectTableCell.h": {
                     "key": "FBGraphObjectTableCell.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBGraphObjectTableCell.h"
                 }, 
                 "FBGraphObjectTableDataSource.h": {
                     "key": "FBGraphObjectTableDataSource.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBGraphObjectTableDataSource.h"
                 }, 
                 "FBGraphObjectTableSelection.h": {
                     "key": "FBGraphObjectTableSelection.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBGraphObjectTableSelection.h"
                 }, 
                 "FBGraphObjectTests.h": {
                     "key": "FBGraphObjectTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBGraphObjectTests.h"
                 }, 
                 "FBGraphPlace.h": {
                     "key": "FBGraphPlace.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBGraphPlace.h"
                 }, 
                 "FBGraphUser.h": {
                     "key": "FBGraphUser.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBGraphUser.h"
                 }, 
                 "FBImageResourceLoader.h": {
                     "key": "FBImageResourceLoader.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBImageResourceLoader.h"
                 }, 
                 "FBInsights.h": {
                     "key": "FBInsights.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBInsights.h"
                 }, 
                 "FBIntegrationTests.h": {
                     "key": "FBIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBIntegrationTests.h"
                 }, 
                 "FBIsStringRepresentingJSONDictionary.h": {
                     "key": "FBIsStringRepresentingJSONDictionary.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBIsStringRepresentingJSONDictionary.h"
                 }, 
                 "FBIsURLHavingQueryParams.h": {
                     "key": "FBIsURLHavingQueryParams.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBIsURLHavingQueryParams.h"
                 }, 
                 "FBLogger.h": {
                     "key": "FBLogger.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBLogger.h"
                 }, 
                 "FBLoginDialog.h": {
                     "key": "FBLoginDialog.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBLoginDialog.h"
                 }, 
                 "FBLoginDialogAuthenticationTests.h": {
                     "key": "FBLoginDialogAuthenticationTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBLoginDialogAuthenticationTests.h"
                 }, 
                 "FBLoginDialogParams.h": {
                     "key": "FBLoginDialogParams.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBLoginDialogParams.h"
                 }, 
                 "FBLoginView.h": {
                     "key": "FBLoginView.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBLoginView.h"
                 }, 
                 "FBLoginViewButtonPNG.h": {
                     "key": "FBLoginViewButtonPNG.h", 
-                    "prefix": "src/ImageResources/FBLoginView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBLoginView/", 
                     "suffix": "FBLoginViewButtonPNG.h"
                 }, 
                 "FBLoginViewButtonPressedPNG.h": {
                     "key": "FBLoginViewButtonPressedPNG.h", 
-                    "prefix": "src/ImageResources/FBLoginView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBLoginView/", 
                     "suffix": "FBLoginViewButtonPressedPNG.h"
                 }, 
                 "FBNativeDialogs.h": {
                     "key": "FBNativeDialogs.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBNativeDialogs.h"
                 }, 
                 "FBOpenGraphAction.h": {
                     "key": "FBOpenGraphAction.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBOpenGraphAction.h"
                 }, 
                 "FBOpenGraphActionShareDialogParams.h": {
                     "key": "FBOpenGraphActionShareDialogParams.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBOpenGraphActionShareDialogParams.h"
                 }, 
                 "FBOpenGraphActionTests.h": {
                     "key": "FBOpenGraphActionTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBOpenGraphActionTests.h"
                 }, 
                 "FBOpenGraphObject.h": {
                     "key": "FBOpenGraphObject.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBOpenGraphObject.h"
                 }, 
                 "FBPlacePickerCacheDescriptor.h": {
                     "key": "FBPlacePickerCacheDescriptor.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBPlacePickerCacheDescriptor.h"
                 }, 
                 "FBPlacePickerViewController+Internal.h": {
                     "key": "FBPlacePickerViewController+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBPlacePickerViewController+Internal.h"
                 }, 
                 "FBPlacePickerViewController.h": {
                     "key": "FBPlacePickerViewController.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBPlacePickerViewController.h"
                 }, 
                 "FBPlacePickerViewGenericPlacePNG.h": {
                     "key": "FBPlacePickerViewGenericPlacePNG.h", 
-                    "prefix": "src/ImageResources/FBPlacePickerView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBPlacePickerView/", 
                     "suffix": "FBPlacePickerViewGenericPlacePNG.h"
                 }, 
                 "FBProfilePictureView.h": {
                     "key": "FBProfilePictureView.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBProfilePictureView.h"
                 }, 
                 "FBProfilePictureViewBlankProfilePortraitPNG.h": {
                     "key": "FBProfilePictureViewBlankProfilePortraitPNG.h", 
-                    "prefix": "src/ImageResources/FBProfilePictureView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBProfilePictureView/", 
                     "suffix": "FBProfilePictureViewBlankProfilePortraitPNG.h"
                 }, 
                 "FBProfilePictureViewBlankProfileSquarePNG.h": {
                     "key": "FBProfilePictureViewBlankProfileSquarePNG.h", 
-                    "prefix": "src/ImageResources/FBProfilePictureView/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/ImageResources/FBProfilePictureView/", 
                     "suffix": "FBProfilePictureViewBlankProfileSquarePNG.h"
                 }, 
                 "FBRequest+Internal.h": {
                     "key": "FBRequest+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequest+Internal.h"
                 }, 
                 "FBRequest.h": {
                     "key": "FBRequest.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBRequest.h"
                 }, 
                 "FBRequestBody.h": {
                     "key": "FBRequestBody.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequestBody.h"
                 }, 
                 "FBRequestConnection+Internal.h": {
                     "key": "FBRequestConnection+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequestConnection+Internal.h"
                 }, 
                 "FBRequestConnection.h": {
                     "key": "FBRequestConnection.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBRequestConnection.h"
                 }, 
                 "FBRequestConnectionIntegrationTests.h": {
                     "key": "FBRequestConnectionIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBRequestConnectionIntegrationTests.h"
                 }, 
                 "FBRequestConnectionRetryManager.h": {
                     "key": "FBRequestConnectionRetryManager.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequestConnectionRetryManager.h"
                 }, 
                 "FBRequestConnectionTests.h": {
                     "key": "FBRequestConnectionTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBRequestConnectionTests.h"
                 }, 
                 "FBRequestHandlerFactory.h": {
                     "key": "FBRequestHandlerFactory.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequestHandlerFactory.h"
                 }, 
                 "FBRequestIntegrationTests.h": {
                     "key": "FBRequestIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBRequestIntegrationTests.h"
                 }, 
                 "FBRequestMetadata.h": {
                     "key": "FBRequestMetadata.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBRequestMetadata.h"
                 }, 
                 "FBRequestTests.h": {
                     "key": "FBRequestTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBRequestTests.h"
                 }, 
                 "FBSDKVersion.h": {
                     "key": "FBSDKVersion.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSDKVersion.h"
                 }, 
                 "FBSafariAuthenticationTests.h": {
                     "key": "FBSafariAuthenticationTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBSafariAuthenticationTests.h"
                 }, 
                 "FBSession+FBSessionLoginStrategy.h": {
                     "key": "FBSession+FBSessionLoginStrategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSession+FBSessionLoginStrategy.h"
                 }, 
                 "FBSession+Internal.h": {
                     "key": "FBSession+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSession+Internal.h"
                 }, 
                 "FBSession+Protected.h": {
                     "key": "FBSession+Protected.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSession+Protected.h"
                 }, 
                 "FBSession.h": {
                     "key": "FBSession.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBSession.h"
                 }, 
                 "FBSessionAppEventsState.h": {
                     "key": "FBSessionAppEventsState.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionAppEventsState.h"
                 }, 
                 "FBSessionAppSwitchingLoginStategy.h": {
                     "key": "FBSessionAppSwitchingLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionAppSwitchingLoginStategy.h"
                 }, 
                 "FBSessionAuthLogger.h": {
                     "key": "FBSessionAuthLogger.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionAuthLogger.h"
                 }, 
                 "FBSessionFacebookAppNativeLoginStategy.h": {
                     "key": "FBSessionFacebookAppNativeLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionFacebookAppNativeLoginStategy.h"
                 }, 
                 "FBSessionFacebookAppWebLoginStategy.h": {
                     "key": "FBSessionFacebookAppWebLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionFacebookAppWebLoginStategy.h"
                 }, 
                 "FBSessionInlineWebViewLoginStategy.h": {
                     "key": "FBSessionInlineWebViewLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionInlineWebViewLoginStategy.h"
                 }, 
                 "FBSessionIntegrationTests.h": {
                     "key": "FBSessionIntegrationTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBSessionIntegrationTests.h"
                 }, 
                 "FBSessionLoginStrategy.h": {
                     "key": "FBSessionLoginStrategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionLoginStrategy.h"
                 }, 
                 "FBSessionLoginStrategyParams.h": {
                     "key": "FBSessionLoginStrategyParams.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionLoginStrategyParams.h"
                 }, 
                 "FBSessionManualTokenCachingStrategy.h": {
                     "key": "FBSessionManualTokenCachingStrategy.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBSessionManualTokenCachingStrategy.h"
                 }, 
                 "FBSessionSafariLoginStategy.h": {
                     "key": "FBSessionSafariLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionSafariLoginStategy.h"
                 }, 
                 "FBSessionSystemLoginStategy.h": {
                     "key": "FBSessionSystemLoginStategy.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionSystemLoginStategy.h"
                 }, 
                 "FBSessionTests.h": {
                     "key": "FBSessionTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBSessionTests.h"
                 }, 
                 "FBSessionTokenCachingStrategy.h": {
                     "key": "FBSessionTokenCachingStrategy.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBSessionTokenCachingStrategy.h"
                 }, 
                 "FBSessionUtility.h": {
                     "key": "FBSessionUtility.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSessionUtility.h"
                 }, 
                 "FBSettings+Internal.h": {
                     "key": "FBSettings+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSettings+Internal.h"
                 }, 
                 "FBSettings.h": {
                     "key": "FBSettings.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBSettings.h"
                 }, 
                 "FBSettingsTests.h": {
                     "key": "FBSettingsTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBSettingsTests.h"
                 }, 
                 "FBShareDialogParams.h": {
                     "key": "FBShareDialogParams.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBShareDialogParams.h"
                 }, 
                 "FBSystemAccountAuthenticationTests.h": {
                     "key": "FBSystemAccountAuthenticationTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBSystemAccountAuthenticationTests.h"
                 }, 
                 "FBSystemAccountStoreAdapter.h": {
                     "key": "FBSystemAccountStoreAdapter.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBSystemAccountStoreAdapter.h"
                 }, 
                 "FBTask+Private.h": {
                     "key": "FBTask+Private.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBTask+Private.h"
                 }, 
                 "FBTask.h": {
                     "key": "FBTask.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBTask.h"
                 }, 
                 "FBTaskCompletionSource.h": {
                     "key": "FBTaskCompletionSource.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBTaskCompletionSource.h"
                 }, 
                 "FBTestBlocker.h": {
                     "key": "FBTestBlocker.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBTestBlocker.h"
                 }, 
                 "FBTestSession+Internal.h": {
                     "key": "FBTestSession+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBTestSession+Internal.h"
                 }, 
                 "FBTestSession.h": {
                     "key": "FBTestSession.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBTestSession.h"
                 }, 
                 "FBTestSessionTests.h": {
                     "key": "FBTestSessionTests.h", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FBTestSessionTests.h"
                 }, 
                 "FBTests.h": {
                     "key": "FBTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBTests.h"
                 }, 
                 "FBURLConnection.h": {
                     "key": "FBURLConnection.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBURLConnection.h"
                 }, 
                 "FBURLConnectionTests.h": {
                     "key": "FBURLConnectionTests.h", 
-                    "prefix": "src/tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/tests/", 
                     "suffix": "FBURLConnectionTests.h"
                 }, 
                 "FBUserSettingsViewController.h": {
                     "key": "FBUserSettingsViewController.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBUserSettingsViewController.h"
                 }, 
                 "FBUtility.h": {
                     "key": "FBUtility.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBUtility.h"
                 }, 
                 "FBViewController+Internal.h": {
                     "key": "FBViewController+Internal.h", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "FBViewController+Internal.h"
                 }, 
                 "FBViewController.h": {
                     "key": "FBViewController.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBViewController.h"
                 }, 
                 "FBWebDialogs.h": {
                     "key": "FBWebDialogs.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FBWebDialogs.h"
                 }, 
                 "Facebook.h": {
                     "key": "Facebook.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "Facebook.h"
                 }, 
                 "FacebookSDK Tests-Prefix.pch": {
                     "key": "FacebookSDK Tests-Prefix.pch", 
-                    "prefix": "FacebookSDK Tests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/FacebookSDK Tests/", 
                     "suffix": "FacebookSDK Tests-Prefix.pch"
                 }, 
                 "FacebookSDK.h": {
                     "key": "FacebookSDK.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "FacebookSDK.h"
                 }, 
                 "FacebookSDKIntegrationTests-Prefix.pch": {
                     "key": "FacebookSDKIntegrationTests-Prefix.pch", 
-                    "prefix": "src/FacebookSDKIntegrationTests/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/FacebookSDKIntegrationTests/", 
                     "suffix": "FacebookSDKIntegrationTests-Prefix.pch"
                 }, 
                 "NSError+FBError.h": {
                     "key": "NSError+FBError.h", 
-                    "prefix": "include/FacebookSDK/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/include/FacebookSDK/", 
                     "suffix": "NSError+FBError.h"
                 }, 
                 "facebook_ios_sdk_Prefix.pch": {
                     "key": "facebook_ios_sdk_Prefix.pch", 
-                    "prefix": "src/", 
+                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/", 
                     "suffix": "facebook_ios_sdk_Prefix.pch"
                 }
             }, 
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpkTG9Uc/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -814,6 +814,10 @@
         }, 
         {
             "header_path": "FacebookSDK.approj/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "FacebookSDK.approj/targets", 
             "type": "I"
         }, 
         {
@@ -870,6 +874,10 @@
         }, 
         {
             "header_path": "FacebookSDK.approj/include/FacebookSDK", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "FacebookSDK.approj/targets/FacebookSDK", 
             "type": "I"
         }, 
         {
@@ -941,26 +949,20 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpkTG9Uc/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpkTG9Uc/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpNnnS7C/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
+    "hmaps": {}, 
     "infoplists": [], 
     "libs": [], 
-    "modules": [
-        {
-            "build_cwd": "ApportableWebViewController", 
-            "project": "ApportableWebViewController", 
-            "project_config": "Release", 
-            "target": "ApportableWebViewController"
-        }
-    ], 
+    "modules": [], 
     "pchs": [
-        "./src/facebook_ios_sdk_Prefix.pch"
+        "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/src/facebook_ios_sdk_Prefix.pch"
     ], 
     "sources": [
         {
