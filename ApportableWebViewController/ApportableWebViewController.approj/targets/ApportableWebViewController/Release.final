@@ -65,19 +65,19 @@
             "hmap": {
                 "ApportableWebViewController-Prefix.pch": {
                     "key": "ApportableWebViewController-Prefix.pch", 
-                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
+                    "prefix": "../../lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
                     "suffix": "ApportableWebViewController-Prefix.pch"
                 }, 
                 "ApportableWebViewController.h": {
                     "key": "ApportableWebViewController.h", 
-                    "prefix": "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
+                    "prefix": "../../lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/", 
                     "suffix": "ApportableWebViewController.h"
                 }
             }, 
             "type": "iquote"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/BUILT_PRODUCTS_DIR/include", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp6OWuzY/BUILT_PRODUCTS_DIR/include", 
             "type": "I"
         }, 
         {
@@ -85,11 +85,11 @@
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/DERIVED_FILE_DIR/armv7", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp6OWuzY/DERIVED_FILE_DIR/armv7", 
             "type": "I"
         }, 
         {
-            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmpKMn0iU/DERIVED_FILE_DIR", 
+            "header_path": "/var/folders/cf/y99l5j9d27z7x99zwpqqw8yr0000gq/T/tmp6OWuzY/DERIVED_FILE_DIR", 
             "type": "I"
         }
     ], 
@@ -110,7 +110,7 @@
     "link_flags": [], 
     "modules": [], 
     "pchs": [
-        "/var/jenkins/workspace/lib/c/ApportableFacebookSDK/ApportableWebViewController/ApportableWebViewController/ApportableWebViewController-Prefix.pch"
+        "./ApportableWebViewController/ApportableWebViewController-Prefix.pch"
     ], 
     "sources": [
         {
