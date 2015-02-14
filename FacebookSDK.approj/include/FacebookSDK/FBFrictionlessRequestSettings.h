@@ -1,0 +1,1 @@
+../../../include/FacebookSDK/FBFrictionlessRequestSettings.h

@@ -21,6 +21,8 @@
  */
 @interface FBAppLinkData : NSObject
 
+-(instancetype) initWithURL:(NSURL*)url targetURL:(NSURL*)targetURL ref:(NSString*)ref originalQueryParameters:(NSDictionary*)originalQueryParameters arguments:(NSDictionary*)arguments;
+
 /*! @abstract The target */
 @property (readonly) NSURL *targetURL;
 

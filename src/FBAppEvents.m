@@ -446,13 +446,13 @@ const int MAX_IDENTIFIER_LENGTH                      = 40;
 
         NSError *regexError;
         self.eventNameRegex = [NSRegularExpression regularExpressionWithPattern:regex
-                                                                        options:nil
+                                                                        options:0
                                                                           error:&regexError];
         self.validatedIdentifiers = [[[NSMutableSet alloc] init] autorelease];
     }
 
     if (![self.validatedIdentifiers containsObject:identifier]) {
-        NSUInteger numMatches = [self.eventNameRegex numberOfMatchesInString:identifier options:nil range:NSMakeRange(0, identifier.length)];
+        NSUInteger numMatches = [self.eventNameRegex numberOfMatchesInString:identifier options:0 range:NSMakeRange(0, identifier.length)];
         if (numMatches > 0) {
             [self.validatedIdentifiers addObject:identifier];
         } else {
@@ -889,7 +889,7 @@ const int MAX_IDENTIFIER_LENGTH                      = 40;
     }
 
     if (flushResult == FlushResultServerError) {
-        [FBAppEvents logAndNotify:[error description] allowLogAsDeveloperError:!allEventsAreImplicit];
+        [FBAppEvents logAndNotify:[error description] allowLogAsDeveloperError:(!allEventsAreImplicit != 0)?&allEventsAreImplicit:0];
     }
 
     NSString *resultString = @"<unknown>";
@@ -968,7 +968,7 @@ const int MAX_IDENTIFIER_LENGTH                      = 40;
 
         FBSessionAppEventsState *appEventsState = session.appEventsState;
         @synchronized (appEventsState) {
-            appEventsState.numSkippedEventsDueToFullBuffer += [[persistedData objectForKey:FBAppEventsPersistKeyNumSkipped] integerValue];
+            appEventsState.numSkippedEventsDueToFullBuffer += (int)[[persistedData objectForKey:FBAppEventsPersistKeyNumSkipped] integerValue];
             NSArray *retrievedObjects = [persistedData objectForKey:FBAppEventsPersistKeyEvents];
             if (retrievedObjects.count) {
                 [appEventsState.inFlightEvents addObjectsFromArray:retrievedObjects];
@@ -1030,7 +1030,8 @@ const int MAX_IDENTIFIER_LENGTH                      = 40;
 }
 
 + (void)logAndNotify:(NSString *)msg {
-    [FBAppEvents logAndNotify:msg allowLogAsDeveloperError:YES];
+    BOOL yes = YES;
+    [FBAppEvents logAndNotify:msg allowLogAsDeveloperError:&yes];
 }
 
 #pragma mark - event log persistence

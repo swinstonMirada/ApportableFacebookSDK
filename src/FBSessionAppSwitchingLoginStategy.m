@@ -29,7 +29,7 @@
 // (e.g., native gdp, native web gdp, safari)
 @interface FBSessionAppSwitchingLoginStategy ()
 
-@property (copy, nonatomic, readwrite) NSString *methodName;
+@property (nonatomic, readwrite, copy) NSString *methodName;
 
 @end
 

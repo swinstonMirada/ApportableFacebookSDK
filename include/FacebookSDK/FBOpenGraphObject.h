@@ -66,7 +66,7 @@
  @property
  @abstract Typed access to the object's description property
  */
-@property (retain, nonatomic) id                    description;
+@property (retain, nonatomic) id                    _description;
 
 /*!
  @property

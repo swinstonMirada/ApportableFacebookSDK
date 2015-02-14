@@ -61,6 +61,19 @@
     return self;
 }
 
+-(instancetype) initWithURL:(NSURL*)url targetURL:(NSURL*)targetURL ref:(NSString*)ref originalQueryParameters:(NSDictionary*)originalQueryParameters arguments:(NSDictionary*)arguments {
+    if((self = [self init])) {
+        self.originalURL = url;
+        self.targetURL = targetURL;
+        self.ref = ref;
+        self.userAgent = nil;
+        self.refererData = nil;
+        self.originalQueryParameters = originalQueryParameters;
+        self.arguments = arguments;
+    }
+    return self;
+}
+
 - (instancetype)initWithURL:(NSURL *)url
                   targetURL:(NSURL *)targetURL
                         ref:(NSString *)ref

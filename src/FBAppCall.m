@@ -91,7 +91,7 @@ NSString *const FBDeferredAppLinkEvent = @"DEFERRED_APP_LINK";
     }
     
     NSURL *targetURL = [NSURL URLWithString:methodArgs[@"target_url"]];
-    NSArray *refArray = [methodArgs[@"ref"] componentsSeparatedByString:@","];
+    NSString *refArray = methodArgs[@"ref"];
     appCall.appLinkData = [[[FBAppLinkData alloc] initWithURL:originalURL targetURL:targetURL ref:refArray originalQueryParameters:originalQueryParameters arguments:methodArgs] autorelease];
     
     return appCall;
