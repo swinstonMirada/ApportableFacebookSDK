@@ -8,6 +8,7 @@
 
 #if !defined(ANDROID)
 //#warning unimplemented on non-Android platform
+void noOp(void) { }
 #else
 
 // 2014/07/11 - requires Apportable BridgeKit 2.x
